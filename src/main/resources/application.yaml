@@ -1,0 +1,33 @@
+application:
+    name: YAML Demonstration
+    version: 1.0
+    author: J. R. Titko
+
+environment:
+    name: Default Environment Properties
+
+# Demonstrates multi-profile.  The --- are required as YAML makes separate property files based on this
+---
+spring:
+    profiles: dev
+environment:
+    name: Dev Environment Properties
+
+---
+spring:
+    profiles: prod
+environment:
+    name: Prod Environment Properties
+
+---    
+spring:
+    profiles: yaml
+customer:
+    name:       Joe Smith
+    street:     
+              - 111 Main St
+              - Suite 100
+    city:       Columbus
+    state:      Ohio
+
+    
